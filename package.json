@@ -1,7 +1,8 @@
 {
   "name": "fileflow",
   "displayName": "FileFlow",
-  "description": "Navigate your files with convenient hotkeys to go back and forth!",
+  "description": "An extension for Visual Studio Code that lets you quickly flow between files, allowing you to make smooth coding presentations",
+  "publisher": "liamhammett",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.84.0"
@@ -9,6 +10,15 @@
   "categories": [
     "Other"
   ],
+  "license": "MIT",
+  "homepage": "https://github.com/imliam/vscode-fileflow",
+  "bugs": {
+    "url": "https://github.com/imliam/vscode-fileflow/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imliam/vscode-fileflow"
+  },
   "main": "./dist/extension.js",
   "activationEvents": [],
   "contributes": {
