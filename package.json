@@ -3,7 +3,8 @@
   "displayName": "FileFlow",
   "description": "An extension for Visual Studio Code that lets you quickly flow between files, allowing you to make smooth coding presentations",
   "publisher": "liamhammett",
-  "version": "0.1.0",
+  "icon": "icon.png",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.84.0"
   },
