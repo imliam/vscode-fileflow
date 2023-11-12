@@ -1,0 +1,107 @@
+{
+  "name": "fileflow",
+  "displayName": "FileFlow",
+  "description": "Navigate your files with convenient hotkeys to go back and forth!",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "fileFlow.goToNextFile",
+        "title": "File Flow: Go to Next File"
+      },
+      {
+        "command": "fileFlow.goToPreviousFile",
+        "title": "File Flow: Go to Previous File"
+      },
+      {
+        "command": "fileFlow.goToNextFolder",
+        "title": "File Flow: Go to Next Folder"
+      },
+      {
+        "command": "fileFlow.goToPreviousFolder",
+        "title": "File Flow: Go to Previous Folder"
+      },
+      {
+        "command": "fileFlow.goToFirstFile",
+        "title": "File Flow: Go to First File"
+      },
+      {
+        "command": "fileFlow.goToLastFile",
+        "title": "File Flow: Go to Last File"
+      }
+    ],
+    "configuration": {
+      "title": "File Flow Configuration",
+      "properties": {
+        "fileFlow.previewFiles": {
+          "type": "string",
+          "enum": ["none", "all", "custom"],
+          "default": "none",
+          "description": "Configure file preview settings"
+        },
+        "fileFlow.previewCustomFileExtensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [".md", ".html"],
+          "description": "File extensions to preview (only when preview settings is set to 'custom')"
+        },
+        "fileFlow.showNavigationPopups": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show a popup with previous/next buttons when navigating"
+        },
+        "fileFlow.showInformationPopups": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show a popup to alert you there are no more files in the given direction"
+        },
+        "fileFlow.outOfBoundsBehavior": {
+          "type": "string",
+          "enum": ["none", "loopCurrentFolder", "goToNextFolder"],
+          "default": "none",
+          "description": "Configure behavior when reaching the end or start of the file list and continuing to navigate in that direction"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vscode/test-electron": "^2.3.6",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

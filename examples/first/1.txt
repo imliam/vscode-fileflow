@@ -1,0 +1,3 @@
+Welcome to File Flow!
+
+Use the commands "Go to next file" and "Go to previous file" to navigate the files in your project.
