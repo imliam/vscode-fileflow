@@ -1,7 +1,7 @@
 # File Flow for VSCode
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/master/icon.png" alt="File Flow for VSCode">
+  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/main/icon.png" alt="File Flow for VSCode">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@ An extension for Visual Studio Code that lets you quickly flow between files, al
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/master/commands.png" alt="Commands supplied by File Flow">
+  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/main/commands.png" alt="Commands supplied by File Flow">
 </p>
 
 File Flow is designed to make it easier to give presentations within VSCode itself. You can prepare some files and seamlessly transition through them from one to the next with a quick key press.
@@ -39,7 +39,7 @@ What happens when you're on the last file in a directory and you try to go to th
 - `fileFlow.loopCurrentFolder` will go back to the first or last file in the current directory
 - `fileFlow.goToNextFolder` will automatically find the first file in the next subdirectory of the parent directory
   - You might want to use this if you have multiple "chapters" of a presentation and want to separate them but still be able to transition smoothly from one to the next
-  - Check the [examples/subfolders](https://github.com/imliam/vscode-inline-parameters/tree/master/examples/subfolders) directory to see how this might work
+  - Check the [examples/subfolders](https://github.com/imliam/vscode-inline-parameters/tree/main/examples/subfolders) directory to see how this might work
 
 ### Previews
 
@@ -50,7 +50,7 @@ By default, VSCode will display the selected file in the regular code editor, bu
 This means you can have beautiful markdown or HTML files rendered inline, allowing you to have great title slides without limitations.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/master/html-preview.png" alt="It even supports HTML!">
+  <img src="https://raw.githubusercontent.com/imliam/vscode-fileflow/main/html-preview.png" alt="It even supports HTML!">
 </p>
 
 Write some CSS inline, or pull in a CSS library to make it work; the only limit is HTML!
