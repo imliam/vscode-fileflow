@@ -220,6 +220,15 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
+    let disposableOpenCurrentFile = vscode.commands.registerCommand('fileFlow.openCurrentFile', () => {
+    const currentFilePath = getCurrentFilePath();
+        if (currentFilePath) {
+            openFile(currentFilePath);
+        } else {
+            infoPopup('No current file to open.');
+        }
+    });
+
     let disposableNextFile = vscode.commands.registerCommand('fileFlow.goToNextFile', () => {
         const currentFilePath = getCurrentFilePath();
         if (currentFilePath) {
@@ -286,5 +295,5 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    context.subscriptions.push(onOpenDisposable, disposableNextFile, disposablePreviousFile, disposableNextFolder, disposablePreviousFolder, disposableFirstFile, disposableLastFile);
+    context.subscriptions.push(onOpenDisposable, disposableNextFile, disposablePreviousFile, disposableNextFolder, disposablePreviousFolder, disposableFirstFile, disposableLastFile, disposableOpenCurrentFile);
 }
