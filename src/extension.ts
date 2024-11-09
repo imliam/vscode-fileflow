@@ -198,7 +198,7 @@ function getLastFileInPreviousFolder(): string | undefined {
 function getCurrentFilePath(): string | undefined {
     const currentDocument = vscode.window.activeTextEditor?.document;
 
-    if (currentDocument) {
+    if (currentDocument && !currentDocument.isUntitled) {
         return currentDocument.fileName;
     }
 
