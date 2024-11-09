@@ -215,7 +215,9 @@ function getCurrentFilePath(): string | undefined {
 
 export function activate(context: vscode.ExtensionContext) {
     let onOpenDisposable = vscode.workspace.onDidOpenTextDocument((document) => {
-        lastOpenedFile = document.fileName;
+        if (!document.isUntitled) {
+            lastOpenedFile = document.fileName;
+        }
     });
 
     let disposableNextFile = vscode.commands.registerCommand('fileFlow.goToNextFile', () => {
