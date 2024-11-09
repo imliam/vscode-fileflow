@@ -39,7 +39,7 @@ function getFoldersInDirectory(directory: string): string[] {
 }
 
 function sortFiles(files: string[]): string[] {
-    return files.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    return files.sort((a, b) => new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' }).compare(a, b));
 }
 
 function openFile(filePath: string): void {
