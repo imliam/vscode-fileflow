@@ -47,6 +47,10 @@
       {
         "command": "fileFlow.goToLastFile",
         "title": "File Flow: Go to Last File"
+      },
+      {
+        "command": "fileFlow.openCurrentFile",
+        "title": "File Flow: Open Current File"
       }
     ],
     "configuration": {
